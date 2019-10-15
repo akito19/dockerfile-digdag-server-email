@@ -21,37 +21,9 @@ Therefore, this dockerfile expects these configuration have been put in `~/.conf
 ```
 digdag.secret-access-policy-file = secret-access-policy.yml
 digdag.secret-encryption-key = your encryption key
-secrets.mail.host=smpt.gmail.com
-secrets.mail.password=PASSWORD
+secrets.mail.host = smtp.gmail.com
+secrets.mail.password = PASSWORD
 ...
 ```
 
-### Sample Workflow
-
-```yaml
-# secrets.dig
-_export:
-  _env:
-    username: ${secret:mail.username}
-    password: ${secret:mail.password}
-    host: ${secret:mail.host}
-    port: ${secret:mail.port}
-```
-
-```yaml
-_export:
-  mail:
-    from: user@sample.org
-    debug: true
-
-+send:
-  !include: secrets.dig
-  mail:
-    username: ${username}
-    password: ${password}
-    host: ${host}
-    port: ${port}
-  mail>: { data: 'hello world' }
-  subject: 'Digdag mail'
-  to: [mail@example.com]
-```
+A sample workflow is in [here](https://github.com/akito19/dockerized-digdag-server-email/sample).
