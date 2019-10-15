@@ -1,12 +1,12 @@
-# Dockerized Digdag Server for Email
+# dockerfile-digdag-server-email
 
-This is dockerized Digdag server to test for email sending.
+This is Dockerfile of [Digdag](https://github.com/treasure-data/digdag) server to test for email sending.
 
 ### Pull and Run this image
 
 ```
-docker pull akito19/dockerized-digdag-server-email:latest
-docker run -p 65432:65432 akito19/dockerized-digdag-server-email
+docker pull akito19/digdag-server-email-sending:latest
+docker run -p 65432:65432 akito19/digdag-server-email-sending
 ```
 
 Then, access to http://localhost:65432
