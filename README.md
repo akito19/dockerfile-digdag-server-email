@@ -27,3 +27,5 @@ secrets.mail.password = PASSWORD
 ```
 
 A sample workflow is in [here](https://github.com/akito19/dockerized-digdag-server-email/sample).
+
+If you try it by Gmail, [This document](https://support.google.com/accounts/answer/185833?hl=en) will help you when setting.

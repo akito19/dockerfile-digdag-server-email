@@ -1,0 +1,16 @@
+_export:
+  mail:
+    port: 587
+    host: smtp.gmail.com
+    username: mail@example.com
+    password: ${secret:mail.password}
+    from: mail@example.com
+    debug: true
+
++secrets:
+    sh>: sh secrets.sh
+
++send:
+    mail>: { data: 'hello world' }
+    subject: 'Sending Email from Digdag server'
+    to: [sample@example.com]
