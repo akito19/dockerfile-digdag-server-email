@@ -12,7 +12,7 @@ RUN apk add curl --no-cache && \
     rm -rf /var/cache/apk/*
 
 COPY digdag.properties /etc/digdag.properties
-COPY secret-access-policy.yml /home/digdag/.config/digdag/secret-access-policy.yml
+COPY secret-access-policy.yaml /home/digdag/.config/digdag/secret-access-policy.yaml
 COPY config /home/digdag/.config/digdag/config
 
 USER digdag

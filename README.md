@@ -19,7 +19,7 @@ The details are in [the docs](https://docs.digdag.io/operators/mail.html?highlig
 Therefore, this dockerfile expects these configuration have been put in `~/.config/digdag/config` like:
 
 ```
-digdag.secret-access-policy-file = secret-access-policy.yml
+digdag.secret-access-policy-file = secret-access-policy.yaml
 digdag.secret-encryption-key = your encryption key
 secrets.mail.host = smtp.gmail.com
 secrets.mail.password = PASSWORD
