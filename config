@@ -1,0 +1,2 @@
+digdag.secret-access-policy-file = secret-access-policy.yaml
+digdag.secret-encryption = ZG9ja2VyaXplZGRpZ2RhZw==
