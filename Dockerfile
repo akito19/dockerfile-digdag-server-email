@@ -1,4 +1,5 @@
 FROM java:8-alpine
+LABEL maintainer "Akito Kasai <kasai@akito19.com>"
 
 ENV DIGDAG_VERSION=0.9.39
 
@@ -11,9 +12,9 @@ RUN apk add curl --no-cache && \
     chown -R digdag.digdag /var/lib/digdag && \
     rm -rf /var/cache/apk/*
 
-COPY digdag.properties /etc/digdag.properties
-COPY secret-access-policy.yaml /home/digdag/.config/digdag/secret-access-policy.yaml
-COPY config /home/digdag/.config/digdag/config
+COPY ./digdag.properties /etc/digdag.properties
+COPY ./secret-access-policy.yaml /home/digdag/.config/digdag/secret-access-policy.yaml
+COPY ./config /home/digdag/.config/digdag/config
 
 USER digdag
 
